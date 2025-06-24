@@ -1,0 +1,11 @@
+*.log
+/vendor
+/node_modules
+.env
+/public/storage
+/storage/*.key
+.idea
+*.log
+*.sqlite
+.DS_Store
+*.bak
