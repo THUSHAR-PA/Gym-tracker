@@ -1,55 +1,55 @@
-body {
-  font-family: Arial, sans-serif;
-  background: #3c5985;
+/* Header container */
+header {
   display: flex;
-  justify-content: center;
+  justify-content: space-between; /* Logo left, nav right */
   align-items: center;
-  height: 100vh;
-  margin: 0;
+  padding: 16px 40px; /* Top/bottom & left/right padding */
+  background: #3c5985;
 }
 
-.login-container {
-  background: rgb(227, 187, 187);
-  padding: 30px 40px;
-  border-radius: 8px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  width: 320px;
-  box-sizing: border-box;
+/* Logo styling */
+header .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
 }
 
-.login-container h2 {
-  margin-bottom: 20px;
+/* Navigation bar */
+nav {
+  display: flex;
+  gap: 32px; /* Equal spacing between links using Flexbox gap */
 }
 
-input[type="text"],
-input[type="password"] {
-  width: 100%;
-  padding: 12px 10px;
-  margin: 10px 0;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-sizing: border-box;
-  font-size: 14px;
+/* Links styling */
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 8px;
+  transition: color 0.3s, background 0.3s;
+  border-radius: 4px;
 }
 
-button {
-  width: 100%;
-  padding: 12px;
-  background: #516478;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 15px;
+/* Link hover effect */
+nav a:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: #e0f0ff;
 }
 
-button:hover {
-  background: #0056b3;
+/* Active link (optional) */
+nav a.active {
+  background: rgba(255, 255, 255, 0.25);
 }
 
-.error-message {
-  color: red;
-  margin-top: 10px;
-  font-size: 14px;
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px 20px;
+  }
+  nav {
+    margin-top: 12px;
+    gap: 20px;
+  }
 }
