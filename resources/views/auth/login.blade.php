@@ -3,25 +3,22 @@
 @section('title', 'Login')
 
 @section('content')
-<div class="login-container">
+<div class="auth-container">
   <h2>Login to Your Account</h2>
-  <form method="POST" action="{{ url('/login') }}">
+  <form method="POST" action="{{ url('/login') }}" class="auth-form">
     @csrf
 
-    <div class="form-group">
-      <input name="email" type="email" placeholder="Email" value="{{ old('email') }}" required>
-      @error('email')<small class="error">{{ $message }}</small>@enderror
-    </div>
+    <input name="email" type="email" placeholder="Email" value="{{ old('email') }}" required>
+    @error('email')<div class="error">{{ $message }}</div>@enderror
 
-    <div class="form-group">
-      <input name="password" type="password" placeholder="Password" required>
-      @error('password')<small class="error">{{ $message }}</small>@enderror
-    </div>
+    <input name="password" type="password" placeholder="Password" required>
+    @error('password')<div class="error">{{ $message }}</div>@enderror
 
-    <button type="submit" class="btn-primary">Login</button>
+    <button type="submit">Login</button>
   </form>
 </div>
 @endsection
+
 @push('styles')
-<link rel="stylesheet" href="{{ asset('css/auth.css') }}">
+@vite('resources/css/auth.css')
 @endpush

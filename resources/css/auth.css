@@ -1,62 +1,67 @@
-/* Auth Form Container */
+/* Shared container for login/signup */
 .auth-container {
-  max-width: 400px;
-  margin: 60px auto;
-  padding: 40px;
+  max-width: 450px;
+  margin: 80px auto;
   background: #ffffff;
-  border-radius: 10px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
-/* Auth Headings */
+/* Page heading */
 .auth-container h2 {
-  margin-bottom: 24px;
-  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2rem;
   color: #3c5985;
 }
 
-/* Input Group */
-.form-group {
-  margin-bottom: 20px;
-  display: flex;
-  flex-direction: column;
-}
-
-input[type="email"],
-input[type="password"],
-input[type="text"] {
-  padding: 12px;
+/* Shared form styling */
+.auth-form input {
+  width: 100%;
+  padding: 12px 16px;
+  margin-bottom: 16px;
   border: 1px solid #ccc;
   border-radius: 6px;
   font-size: 1rem;
-  transition: border-color 0.3s;
+  transition: border 0.3s;
 }
 
-input:focus {
+.auth-form input:focus {
   outline: none;
   border-color: #3c5985;
 }
 
-/* Submit Button */
-.btn-primary {
+/* Error message style */
+.error {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: -12px;
+  margin-bottom: 8px;
+  text-align: left;
+}
+
+/* Button */
+.auth-form button {
+  width: 100%;
+  padding: 12px;
   background: #3c5985;
   color: white;
-  padding: 12px;
   border: none;
   border-radius: 6px;
-  font-size: 1rem;
+  font-size: 1.1rem;
   cursor: pointer;
-  width: 100%;
   transition: background 0.3s;
 }
 
-.btn-primary:hover {
+.auth-form button:hover {
   background: #2e4568;
 }
 
-/* Error messages */
-.error {
-  color: #e74c3c;
-  font-size: 0.85rem;
-  margin-top: 4px;
+/* Responsive */
+@media (max-width: 600px) {
+  .auth-container {
+    margin: 40px 20px;
+    padding: 30px 20px;
+  }
 }
