@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2&display=swap" rel="stylesheet">
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>@yield('title', 'Food & Gym Tracker')</title>
-  @vite(['resources/css/style.css', 'resources/js/app.js'])
+  @vite(['resources/css/style.css'])
+  @stack('styles')
+
 
 </head>
 <body>
